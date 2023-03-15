@@ -6,4 +6,6 @@ import cube from "./js/Box"
 
 scene.add(cube);
 camera.position.z = 5;
+camera.position.x = 3;
+camera.lookAt(cube.position);
 renderer.render(scene, camera);
