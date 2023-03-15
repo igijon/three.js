@@ -1,6 +1,3 @@
-import { saludar } from './js/componentes';
-import './styles.scss';
+import scene from "./js/Scene"
 
-const nombre = 'Inma';
-
-saludar( nombre );
+console.log(scene)
