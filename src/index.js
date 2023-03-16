@@ -5,6 +5,7 @@ import renderer from "./js/Renderer"
 import cube from "./js/Box"
 import light from './js/Light'
 import resize from './js/Resize'
+import loopMachine from './js/LoopMachine'
 
 scene.add(cube);
 // camera.position.z = 5;
@@ -15,7 +16,8 @@ camera.lookAt(cube.position);
 scene.add(light);
 resize.start(renderer);
 
-setInterval(() => {
+loopMachine.addCallback(() => {
     cube.rotation.y+=0.01
     renderer.render(scene, camera);
-}, 1000/30); //30 fps
+}); 
+loopMachine.start();
