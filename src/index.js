@@ -8,6 +8,7 @@ import resize from './js/Resize'
 import loopMachine from './js/LoopMachine'
 import keyListener from './js/KeyListener'
 import './js/OrbitImplementation'
+import './js/StatsImplementations'
 
 scene.add(cube);
 // camera.position.z = 5;
