@@ -12,4 +12,8 @@ scene.add(cube);
 camera.position.set(5,3,1);
 camera.lookAt(cube.position);
 scene.add(light);
-renderer.render(scene, camera);
+
+setInterval(() => {
+    cube.rotation.y+=0.01
+    renderer.render(scene, camera);
+}, 1000/30); //30 fps
