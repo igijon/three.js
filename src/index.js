@@ -9,6 +9,8 @@ import loopMachine from './js/LoopMachine'
 import keyListener from './js/KeyListener'
 import './js/OrbitImplementation'
 import './js/StatsImplementations'
+import './js/GUIImplementation'
+import guiImplementation from './js/GUIImplementation'
 
 scene.add(cube);
 // camera.position.z = 5;
@@ -24,9 +26,13 @@ loopMachine.addCallback(() => {
 }); 
 loopMachine.start();
 keyListener.start();
+guiImplementation.start();
 
-setTimeout(() => {
-    console.log(keyListener.isPressed(13));
-}, 3000);
+// setTimeout(() => {
+//     guiImplementation.stop();
+// }, 3000);
+// setTimeout(() => {
+//     guiImplementation.start();
+// }, 5000);
 
 
